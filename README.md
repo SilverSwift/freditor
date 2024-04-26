@@ -1,0 +1,2 @@
+# freditor
+Free text editor
