@@ -1,19 +1,14 @@
-//#include <QGuiApplication>
 #include <QApplication>
-#include <QQmlApplicationEngine>
 
-#include "testqsci.h"
+#include "toplevelcontainer.h"
+//#include "presentation/mainwindow.h"
 
 int main(int argc, char** argv)
 {
-//    QGuiApplication app (argc, argv);
     QApplication app (argc, argv);
 
-    TestQsci t;
-    t.show();
-
-
-//    QQmlApplicationEngine engine(QStringLiteral("qrc:/qml/main.qml"));
+    TopLevelContainer container;
+    container.show();
 
     return app.exec();
 }

@@ -4,7 +4,13 @@ QT += \
 
 SOURCES += \
     main.cpp \
+    src/domain/commandhandler.cpp \
+    src/presentation/mainwindow.cpp \
+    src/presentation/menubar.cpp \
+    src/toplevelcontainer.cpp \
     testqsci.cpp
+
+INCLUDEPATH += src
 
 DISTFILES +=
 
@@ -18,4 +24,9 @@ INCLUDEPATH += $$PWD/qsci/include
 DEPENDPATH += $$PWD/qsci/include
 
 HEADERS += \
+    src/common/commands.h \
+    src/domain/commandhandler.h \
+    src/presentation/mainwindow.h \
+    src/presentation/menubar.h \
+    src/toplevelcontainer.h \
     testqsci.h
