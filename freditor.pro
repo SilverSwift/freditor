@@ -1,14 +1,21 @@
 QT += \
     core \
-    gui \
-    qml \
-    quick
+    widgets
 
 SOURCES += \
-    main.cpp
+    main.cpp \
+    testqsci.cpp
 
-DISTFILES += \
-    qml/main.qml
+DISTFILES +=
 
 RESOURCES += \
     main.qrc
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/qsci/bin/ -lqscintilla2_qt6
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/qsci/bin/ -lqscintilla2_qt6d
+
+INCLUDEPATH += $$PWD/qsci/include
+DEPENDPATH += $$PWD/qsci/include
+
+HEADERS += \
+    testqsci.h
